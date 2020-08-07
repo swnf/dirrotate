@@ -36,7 +36,7 @@ def do_move(file):
 
 
 def register(file):
-    if file.name.startswith('.'):
+    if file.name.startswith('.') or file.is_dir():
         return
     if not [item for item in s.queue if item[3] == (file, )]:
         sleep(3)
